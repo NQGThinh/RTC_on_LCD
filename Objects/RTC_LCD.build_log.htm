@@ -1,0 +1,436 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: thinh nguyen, thinhdaudinh, LIC=UJWP0-BIVPL-BSCYX-HRXUC-2ZWPV-2CW12
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\admin\Documents\UTE\Source_keilC\RTC_LCD\RTC_LCD.uvprojx
+Project File Date:  05/04/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+SYSTICK.c(1): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+1 warning generated.
+compiling SYSTICK.c...
+LCD.c(2): warning: In file included from...
+./LCD.h(26): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LCD.c(44): warning: implicit declaration of function 'mdelay' [-Wimplicit-function-declaration]
+        mdelay(40);
+        ^
+LCD.c(58): warning: implicit declaration of function 'udelay' [-Wimplicit-function-declaration]
+        udelay(100);
+        ^
+LCD.c(73): warning: implicit declaration of function 'lcd_enable' [-Wimplicit-function-declaration]
+        lcd_enable();
+        ^
+4 warnings generated.
+compiling LCD.c...
+main.c(3): warning: In file included from...
+./DS1307.h(73): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(8): warning: no previous prototype for function 'get_day_of_week' [-Wmissing-prototypes]
+char* get_day_of_week(uint8_t i)
+      ^
+main.c(8): note: declare 'static' if the function is not intended to be used outside of this translation unit
+char* get_day_of_week(uint8_t i)
+^
+static 
+main.c(14): warning: no previous prototype for function 'number_to_string' [-Wmissing-prototypes]
+void number_to_string(uint8_t num, char* buf)
+     ^
+main.c(14): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void number_to_string(uint8_t num, char* buf)
+^
+static 
+main.c(28): warning: no previous prototype for function 'time_to_string' [-Wmissing-prototypes]
+char* time_to_string(RTC_Time_t* rtc_time)
+      ^
+main.c(28): note: declare 'static' if the function is not intended to be used outside of this translation unit
+char* time_to_string(RTC_Time_t* rtc_time)
+^
+static 
+main.c(43): warning: no previous prototype for function 'date_to_string' [-Wmissing-prototypes]
+char* date_to_string(RTC_Date_t* rtc_date)
+      ^
+main.c(43): note: declare 'static' if the function is not intended to be used outside of this translation unit
+char* date_to_string(RTC_Date_t* rtc_date)
+^
+static 
+main.c(66): warning: // comments are not allowed in this language [-Wcomment]
+    //Clear the value of SVR
+    ^
+main.c(58): warning: no previous prototype for function 'init_systick_timer' [-Wmissing-prototypes]
+void init_systick_timer(uint32_t tick_hz)
+     ^
+main.c(58): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_systick_timer(uint32_t tick_hz)
+^
+static 
+main.c(89): warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+                printf("RTC init failed");
+                ^
+main.c(89): note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+main.c(114): warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if(current_time.time_format |= TIME_FORMAT_24HRS)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+main.c(114): note: place parentheses around the assignment to silence this warning
+        if(current_time.time_format |= TIME_FORMAT_24HRS)
+                                    ^
+           (                                            )
+main.c(114): note: use '!=' to turn this compound assignment into an inequality comparison
+        if(current_time.time_format |= TIME_FORMAT_24HRS)
+                                    ^~
+                                    !=
+main.c(122): warning: more '%' conversions than data arguments [-Wformat-insufficient-args]
+                printf("Current time = %s %s", time_to_string(&current_time));  /* 04:07:10 */
+                                          ~^
+main.c(113): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        char* am_pm;
+              ^
+main.c(130): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(144): warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if(current_time.time_format |= TIME_FORMAT_24HRS)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+main.c(144): note: place parentheses around the assignment to silence this warning
+        if(current_time.time_format |= TIME_FORMAT_24HRS)
+                                    ^
+           (                                            )
+main.c(144): note: use '!=' to turn this compound assignment into an inequality comparison
+        if(current_time.time_format |= TIME_FORMAT_24HRS)
+                                    ^~
+                                    !=
+main.c(152): warning: more '%' conversions than data arguments [-Wformat-insufficient-args]
+                printf("Current time = %s %s", time_to_string(&current_time));  /* 04:07:10 */
+                                          ~^
+main.c(159): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+main.c(143): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        char* am_pm;
+              ^
+main.c(135): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+main.c(135): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+17 warnings generated.
+compiling main.c...
+I2C.c(4): warning: no previous extern declaration for non-static variable 'AHB_Prescaler' [-Wmissing-variable-declarations]
+uint16_t AHB_Prescaler[8] = {2,4,8,16,64,128,256,512};
+         ^
+I2C.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t AHB_Prescaler[8] = {2,4,8,16,64,128,256,512};
+^
+I2C.c(5): warning: no previous extern declaration for non-static variable 'APB1_Prescaler' [-Wmissing-variable-declarations]
+uint16_t APB1_Prescaler[4] = {2,4,8,16};
+         ^
+I2C.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t APB1_Prescaler[4] = {2,4,8,16};
+^
+I2C.c(34): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                pI2Cx->CR1 &= ~(1<<10);
+                           ~~ ^~~~~~~~
+I2C.c(45): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        SlaveAddr = SlaveAddr << 1;
+                  ~ ~~~~~~~~~~^~~~
+I2C.c(52): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        SlaveAddr = SlaveAddr << 1;
+                  ~ ~~~~~~~~~~^~~~
+I2C.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pI2CHandle->pI2Cx->CR2 &= ~(1<<10);
+                               ~~ ^~~~~~~~
+I2C.c(105): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pI2CHandle->pI2Cx->CR2 &= ~(1<<9);
+                               ~~ ^~~~~~~
+I2C.c(2): warning: In file included from...
+./I2C.h(25): warning: padding struct 'I2C_Handle_t' with 1 byte to align 'RxSize' [-Wpadded]
+        uint32_t RxSize;                                        /* To store Rx size */
+                 ^
+./I2C.h(14): warning: padding size of 'I2C_Handle_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+I2C.c(120): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pI2CHandle->pI2Cx->CR2 &= ~(1<<10);
+                               ~~ ^~~~~~~~
+I2C.c(123): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pI2CHandle->pI2Cx->CR2 &= ~(1<<9);
+                               ~~ ^~~~~~~
+I2C.c(139): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                if(pI2Cx == I2C1)                                       {SPI1_CLK_DI();}
+                                                                         ^~~~~~~~~~~~~
+./stm32f1xx.h(268): note: expanded from macro 'SPI1_CLK_DI'
+#define SPI1_CLK_DI()   (RCC->APB2ENR &= ~(1<<12))
+                                      ~~ ^~~~~~~~
+I2C.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                else if(pI2Cx == I2C2)                  {SPI2_CLK_DI();}
+                                                         ^~~~~~~~~~~~~
+./stm32f1xx.h(269): note: expanded from macro 'SPI2_CLK_DI'
+#define SPI2_CLK_DI()   (RCC->APB1ENR &= ~(1<<14))
+                                      ~~ ^~~~~~~~
+I2C.c(152): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        pI2Cx->CR1 &= ~(1<<I2C_CR1_PE);
+                                   ~~ ^~~~~~~~~~~~~~~~
+I2C.c(179): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                ahbp = AHB_Prescaler[temp - 8];
+                     ~ ^~~~~~~~~~~~~~~~~~~~~~~
+I2C.c(190): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                apb1p = APB1_Prescaler[temp - 4];
+                      ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+I2C.c(166): warning: variable 'Systemclk' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        else if(clksrc == 1)
+                ^~~~~~~~~~~
+I2C.c(193): note: uninitialized use occurs here
+        pclk1 = ((Systemclk/ahbp)/apb1p);
+                  ^~~~~~~~~
+I2C.c(166): note: remove the 'if' if its condition is always true
+        else if(clksrc == 1)
+             ^~~~~~~~~~~~~~~
+I2C.c(159): note: initialize the variable 'Systemclk' to silence this warning
+        uint32_t pclk1, Systemclk;
+                                 ^
+                                  = 0
+I2C.c(203): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        tempreg |= (pI2CHandle->I2C_Config.ACKControl << I2C_CR1_ACK);
+                ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+I2C.c(212): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        tempreg |= (pI2CHandle->I2C_Config.DeviceAdrress << 1);
+                ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+I2C.c(222): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                ccr_value = (RCC_GetPCLK1Value() / (2*pI2CHandle->I2C_Config.SCL_Speed));
+                          ~  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I2C.c(229): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                tempreg |= (pI2CHandle->I2C_Config.FMDutyCycle << 14);
+                        ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+I2C.c(232): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        ccr_value = (RCC_GetPCLK1Value() / (3*pI2CHandle->I2C_Config.SCL_Speed));
+                                  ~  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I2C.c(236): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        ccr_value = (RCC_GetPCLK1Value() / (25*pI2CHandle->I2C_Config.SCL_Speed));
+                                  ~  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I2C.c(202): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t tempreg = 0;
+                 ^
+I2C.c(322): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                *pRxBuffer = pI2CHandle->pI2Cx->DR;
+                           ~ ~~~~~~~~~~~~~~~~~~~^~
+I2C.c(333): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+                for(uint32_t i=Len; i>0; i--)
+                    ^
+I2C.c(333): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+I2C.c(345): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                        *pRxBuffer = pI2CHandle->pI2Cx->DR;
+                                   ~ ~~~~~~~~~~~~~~~~~~~^~
+I2C.c(407): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                *pI2CHandle->pTxBuffer = pI2CHandle->pI2Cx->DR;
+                                       ~ ~~~~~~~~~~~~~~~~~~~^~
+I2C.c(418): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                *pI2CHandle->pTxBuffer = pI2CHandle->pI2Cx->DR;
+                                       ~ ~~~~~~~~~~~~~~~~~~~^~
+I2C.c(511): warning: comparison between pointer and integer ('I2C_Regdef_t *' and 'int') [-Wpointer-integer-compare]
+                if(pI2CHandle->pI2Cx == I2C_BUSY_IN_TX)
+                   ~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~
+I2C.c(522): warning: comparison between pointer and integer ('I2C_Regdef_t *' and 'int') [-Wpointer-integer-compare]
+                if(pI2CHandle->pI2Cx == I2C_BUSY_IN_RX)
+                   ~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~
+I2C.c(528): warning: unused parameter 'pI2CHandle' [-Wunused-parameter]
+void I2C_ER_IRQHandling(I2C_Handle_t* pI2CHandle)
+                                      ^
+33 warnings generated.
+compiling I2C.c...
+DS1307.c(1): warning: In file included from...
+./DS1307.h(73): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+DS1307.c(28): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint8_t clock_state = ds1307_read(DS1307_ADDR_SEC);
+                ^
+DS1307.c(101): warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned int)' [-Wimplicit-function-declaration]
+        memset(&i2c_sda,0,sizeof(i2c_sda));
+        ^
+DS1307.c(101): note: include the header <string.h> or explicitly provide a declaration for 'memset'
+DS1307.c(1): warning: In file included from...
+./DS1307.h(4): warning: In file included from...
+./stm32f1xx.h(484): warning: In file included from...
+./GPIO.h(5): warning: In file included from...
+./stm32f1xx.h(485): warning: In file included from...
+./I2C.h(25): warning: padding struct 'I2C_Handle_t' with 1 byte to align 'RxSize' [-Wpadded]
+        uint32_t RxSize;                                        /* To store Rx size */
+                 ^
+./I2C.h(14): warning: padding size of 'I2C_Handle_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+DS1307.c(9): warning: no previous extern declaration for non-static variable 'ds1307_I2C_Handle' [-Wmissing-variable-declarations]
+I2C_Handle_t    ds1307_I2C_Handle;
+                ^
+DS1307.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+I2C_Handle_t    ds1307_I2C_Handle;
+^
+6 warnings generated.
+compiling DS1307.c...
+GPIO.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                if(pGPIOx == GPIOA)                     {GPIOA_CLK_DI();}
+                                                         ^~~~~~~~~~~~~~
+./stm32f1xx.h(249): note: expanded from macro 'GPIOA_CLK_DI'
+#define GPIOA_CLK_DI()  (RCC->APB2ENR &=~ (1<<2))
+                                      ~~^~~~~~~~
+GPIO.c(33): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                else if(pGPIOx == GPIOB)                {GPIOB_CLK_DI();}
+                                                         ^~~~~~~~~~~~~~
+./stm32f1xx.h(250): note: expanded from macro 'GPIOB_CLK_DI'
+#define GPIOB_CLK_DI()  (RCC->APB2ENR &=~ (1<<3))
+                                      ~~^~~~~~~~
+GPIO.c(34): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                else if(pGPIOx == GPIOC)                {GPIOC_CLK_DI();}
+                                                         ^~~~~~~~~~~~~~
+./stm32f1xx.h(251): note: expanded from macro 'GPIOC_CLK_DI'
+#define GPIOC_CLK_DI()  (RCC->APB2ENR &=~ (1<<4))
+                                      ~~^~~~~~~~
+GPIO.c(35): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                else if(pGPIOx == GPIOD)                {GPIOD_CLK_DI();}
+                                                         ^~~~~~~~~~~~~~
+./stm32f1xx.h(252): note: expanded from macro 'GPIOD_CLK_DI'
+#define GPIOD_CLK_DI()  (RCC->APB2ENR &=~ (1<<5))
+                                      ~~^~~~~~~~
+GPIO.c(36): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                else if(pGPIOx == GPIOE)                {GPIOE_CLK_DI();}
+                                                         ^~~~~~~~~~~~~~
+./stm32f1xx.h(253): note: expanded from macro 'GPIOE_CLK_DI'
+#define GPIOE_CLK_DI()  (RCC->APB2ENR &=~ (1<<6))
+                                      ~~^~~~~~~~
+GPIO.c(71): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                pGPIOHandle->pGPIOx->CR[temp1] &= ~(0x3 << (4*temp2));
+                                               ~~ ^~~~~~~~~~~~~~~~~~~
+GPIO.c(95): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                AFIO->EXTICR[Temp1] |= (portcode << (4*Temp2));
+                                    ~~  ~~~~~~~~~^~~~~~~~~~~~
+GPIO.c(91): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+                uint32_t Temp1 = (pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber / 4);
+                         ^
+GPIO.c(104): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pGPIOHandle->pGPIOx->CR[temp1] &= ~(0x3 << (2 + (4*temp2)));
+                                       ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        if(pGPIOx == (GPIO_Regdef_t*)GPIOA_BASEADDR) {GPIOA_REG_RESET();}
+                                                      ^~~~~~~~~~~~~~~~~
+./stm32f1xx.h(294): note: expanded from macro 'GPIOA_REG_RESET'
+#define GPIOA_REG_RESET()       do{RCC->APB2RSTR |= (1<<2);   RCC->APB2RSTR &= ~(1<<2);}while(0)  /*do...while...condition zero - technique in C language*/
+                                                                            ~~ ^~~~~~~
+GPIO.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        if(pGPIOx == (GPIO_Regdef_t*)GPIOB_BASEADDR) {GPIOB_REG_RESET();}
+                                                      ^~~~~~~~~~~~~~~~~
+./stm32f1xx.h(295): note: expanded from macro 'GPIOB_REG_RESET'
+#define GPIOB_REG_RESET()       do{RCC->APB2RSTR |= (1<<3);   RCC->APB2RSTR &= ~(1<<3);}while(0)
+                                                                            ~~ ^~~~~~~
+GPIO.c(142): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        if(pGPIOx == (GPIO_Regdef_t*)GPIOC_BASEADDR) {GPIOC_REG_RESET();}
+                                                      ^~~~~~~~~~~~~~~~~
+./stm32f1xx.h(296): note: expanded from macro 'GPIOC_REG_RESET'
+#define GPIOC_REG_RESET()       do{RCC->APB2RSTR |= (1<<4);   RCC->APB2RSTR &= ~(1<<4);}while(0)
+                                                                            ~~ ^~~~~~~
+GPIO.c(143): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        if(pGPIOx == (GPIO_Regdef_t*)GPIOD_BASEADDR) {GPIOD_REG_RESET();}
+                                                      ^~~~~~~~~~~~~~~~~
+./stm32f1xx.h(297): note: expanded from macro 'GPIOD_REG_RESET'
+#define GPIOD_REG_RESET()       do{RCC->APB2RSTR |= (1<<5);   RCC->APB2RSTR &= ~(1<<5);}while(0)
+                                                                            ~~ ^~~~~~~
+GPIO.c(144): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        if(pGPIOx == (GPIO_Regdef_t*)GPIOE_BASEADDR) {GPIOE_REG_RESET();}
+                                                      ^~~~~~~~~~~~~~~~~
+./stm32f1xx.h(298): note: expanded from macro 'GPIOE_REG_RESET'
+#define GPIOE_REG_RESET()       do{RCC->APB2RSTR |= (1<<6);   RCC->APB2RSTR &= ~(1<<6);}while(0)
+                                                                            ~~ ^~~~~~~
+GPIO.c(278): warning: // comments are not allowed in this language [-Wcomment]
+        uint8_t pr_reg_x = (IRQNumber / 4);                     // similar to div 4
+                                                                ^
+GPIO.c(281): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        NVIC->IPR[pr_reg_x] |= (IRQPriority << (8*shift_amount));
+                            ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+16 warnings generated.
+compiling GPIO.c...
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(65): warning: In file included from...
+C:/Users/admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+4 warnings generated.
+compiling system_stm32f10x.c...
+linking...
+.\Objects\RTC_LCD.axf: Error: L6218E: Undefined symbol mdelay (referred from lcd.o).
+.\Objects\RTC_LCD.axf: Error: L6218E: Undefined symbol udelay (referred from lcd.o).
+.\Objects\RTC_LCD.axf: Error: L6218E: Undefined symbol lcd_enable (referred from lcd.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 3 error messages.
+".\Objects\RTC_LCD.axf" - 3 Error(s), 81 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Target not created.
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
